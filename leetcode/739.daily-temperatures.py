@@ -7,14 +7,14 @@
 # @lc code=start
 class Solution:
     def dailyTemperatures(self, T: List[int]) -> List[int]:
-        a = [0] * len(T)
+        answer = [0] * len(T)
         stack = []
         for i, cur in enumerate(T):
             while stack and cur > T[stack[-1]]:
                 last = stack.pop()
                 a[last] = i - last
             stack.append(i)
-        return a
+        return answer
         
 # @lc code=end
 
