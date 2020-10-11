@@ -8,8 +8,10 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         def dfs(i, j):
+            # 땅이 아닌 경우 종료
             if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[0]) or grid[i][j] != "1":
                 return
+
             grid[i][j] = 0
 
             dfs(i + 1, j)
