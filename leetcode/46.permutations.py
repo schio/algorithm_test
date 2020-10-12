@@ -21,8 +21,10 @@ class Solution:
                 prev_elements.append(e)
                 dfs(next_elements)
                 prev_elements.pop()
-        dfs(nums)
-        return results
+        # dfs(nums)
+        # return results
+
+        return list(itertools.permutations(nums))
 
 
 # @lc code=end
